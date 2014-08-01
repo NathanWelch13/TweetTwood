@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="/jquery-1.11.1"></script>
+     <title>Tweet twood</title>
+     
+      <div class="icon">
+           <link rel="shortcut icon" href="/images/twitter_logo.jpg" />
+      </div>   
+             
+              <link rel="stylesheet" type="text/css" href="/styles/website.css">
+
+        <div class="map">
+               <table width="100%" border="0" height="100%" align="CENTER">
+               <tr><td align="CENTER">  
+        
+        <style>
+        #map_canvas {
+        width: 1200px;
+        height: 545px;
+        }
+
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var map_canvas = document.getElementById('map_canvas');
+                var map_options = {
+                    center: new google.maps.LatLng(54.224995, -3.88916),
+                    zoom: 6,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(map_canvas, map_options);
+
+                var myLatlng = new google.maps.LatLng(53.4482653525854,-2.65961862621958);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title:"Cheshire"
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+      </div>  
+
+</head>
+  
+  <body>
+    <ul>
+        <% for tweet in @tweets %>
+            <li><%= tweet.text %></li>
+        <% end %>
+    
+    <div class="box" id="nathan">
+
+    <form  class="box" name="input" action="" method="get">
+
+
+        <select class="box" name="geocode">
+            <option value="52,0833,-0.4167,20mi">Bedfordshire</option>
+            <option value="51.4167,-1.000,20mi">Berkshire</option>
+            <option value="55.3600,-2.4900,20mi">Borders</option>
+            <option value="51.80722,-0.812766,20mi">Buckinghamshire</option>
+            <option value="52.2050,0.1190,20mi">Cambridgeshire</option>
+            <option value="53.1667,-2.5833,20mi">Cheshire</option>
+            <option value="53.21301,-3.04104,20mi">Clwyd</option>
+            <option value="50.3000,-4.9000,20mi">Cornwall</option>
+            <option value="54.9414,-6.2108,20mi">County Antrim</option>
+            <option value="54.3499,-6.6546,20mi">County Armagh</option>
+            <option value="54.3600,-5.9400,20mi">County Down</option>
+            <option value="54.3500,-7.6300,20mi">County Fermanagh</option>
+            <option value="54.9200,-6.8500,20mi">County Londonderry</option>
+            <option value="54.6100,-7.16000,20mi">County Tyrone</option>
+            <option value="54.57723,-2.79748,20mi">Cumbria</option>
+            <option value="53.12232,-1.51368,20mi">Derbyshire</option>
+            <option value="50.700,-3.800,20mi">Devon</option>
+            <option value="50.8333,-2.3333,20mi">Dorset</option>
+            <option value="55.070,-3.603,20mi">Dumfries and Galloway</option>
+            <option value="54.7761,-1.5733,20mi">Durham</option>
+            <option value="51.9400,-4.5100,20mi">Dyfed</option>
+            <option value="50.9167,0.3333,20mi">East Sussex</option>
+            <option value="51.765908,0.667365,20mi">Essex</option>
+            <option value="56.250,-3.200,20mi">Fife</option>
+            <option value="51.8333,-2.1667,20mi">Gloucestershire</option>
+            <option value="56.6964541,-3.847349,20mi">Grampian</option>
+            <option value="53.47925,-2.2479,20mi">Greater Manchester</option>
+            <option value="51.5833,-3.000,20mi">Gwent</option>
+            <option value="52.8333,-3.9167,20mi">Gwynedd County</option>
+            <option value="51.0833,-1.2500,20mi">Hampshire</option>
+            <option value="52.0833,-2.7500,20mi">Herefordshire</option>
+            <option value="51.900,-0.2000,20mi">Hertfordshire</option>
+            <option value="57.1200,-4.7100,20mi">Highlands and Islands</option>
+            <option value="53.5744,-0.3508,20mi">Humberside</option>
+            <option value="50.6667,-1.2667,20mi">Isle of Wight</option>
+            <option value="51.1900,0.7300,20mi">Kent</option>
+            <option value="53.8000,-2.600,20mi">Lancashire</option>
+            <option value="52.7401227,-1.14059,20mi">Leicestershire</option>
+            <option value="53.0667,-0.1833,20mi">Lincolnshire</option>
+            <option value="55.9092,-3.0844,20mi">Lothian</option>
+            <option value="53.37134,-3.1267,20mi">Merseyside</option>
+            <option value="51.8160,-3.3680,20mi">Mid Glamorgan</option>
+            <option value="52.6667,1.000,20mi">Norfolk</option>
+            <option value="54.2504,-1.470856,20mi">North Yorkshire</option>
+            <option value="52.2833,-0.8333,20mi">Northamptonshire</option>
+            <option value="55.1667,-2.000,20mi">Northumberland</option>
+            <option value="52.9547,-1.15809,20mi">Nottinghamshire</option>
+            <option value="51.75172,-1.25528,20mi">Oxfordshire</option>
+            <option value="52.300,-3.4167,20mi">Powys</option>
+            <option value="52.6583,-0.63964299,20mi">Rutland</option>
+            <option value="52.58648,-2.70375,20mi">Shropshire</option>
+            <option value="51.1800,-3.000,20mi">Somerset</option>
+            <option value="51.4990,-3.3300,20mi">South Glamorgan</option>
+            <option value="53.5000,-1.3333,20mi">South Yorkshire</option>
+            <option value="52.8333,-2.0000,20mi">Staffordshire</option>
+            <option value="52.187247,0.97078,20mi">Suffolk</option>
+            <option value="51.2500,-0.4167,20mi">Surrey</option>
+            <option value="55.87402,-3.98879,20mi">Tayside</option>
+            <option value="54.9740,-1.6132,20mi">Tyne and Wear</option>
+            <option value="52.3333,-1.5833,20mi">Warwickshire</option>
+            <option value="51.8220,-3.8330,20mi">West Glamorgan</option>
+            <option value="52.5000,-1.8333,20mi">West Midlands</option>
+            <option value="50.9167,-0.5000,20mi">West Sussex</option>
+            <option value="53.7500,-1.6667,20mi">West Yorkshire</option>
+            <option value="51.3333,-1.9167,20mi">Wiltshire</option>
+            <option value="52.2000,-2.1667,20mi">Worcestershire</option>
+
+
+        </select>
+
+        <!--<p>postcode: <input type="text" name ="post_code"></p>-->
+
+        <p>
+            <!--<input type="radio" name="search" id="search_happy" value=":)" />
+            <label for="search_happy">Happy</label>
+            
+            <input type="radio" name="search" id="search_sad" value=":(" />
+            <label for="search_sad">Sad</label>-->
+
+            <a href="?search=":)""><img class="box" class="faces" src="/images/Happy-face.png"/></a>
+            <a href="?search=":(""><img class="box" class="faces" src="/images/Sad-face.png"/></a>
+        </p>
+        
+            <p class="box"><input type="submit" value="Try Me"></p>
+
+   
+    </form> 
+</div>
+
+    </ul>
+    <img src="/images/twitter_finish.jpg"/img>
+    <div id="map_canvas"></div> 
+
+    <script>
+        $('#nathan').on('click',function(){
+            $(this).toggleClass('box');
+        });
+    </script>
+
+  </body>
+</html>

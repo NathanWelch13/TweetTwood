@@ -1,4 +1,4 @@
-git clone git@heroku.com:tweet-twoot.git -o heroku
+#git clone git@heroku.com:tweet-twoot.git -o heroku
 require 'sinatra'
 require './twitter'
 require 'pat'

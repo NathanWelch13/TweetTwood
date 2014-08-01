@@ -1,0 +1,59 @@
+body  {
+  background-color: #CCFFFF
+}
+
+h1 {
+  background-color: #0099CC;
+  width: 400px;
+ }
+
+.faces {
+  height:100px;
+  width: 100px;
+}
+.map  {
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+}
+
+ img  {
+  width: 265px;
+  height: 71.5px;
+ }
+
+#nathan  {
+	background-color: #32ccfe;
+	width: 200px;
+	min-height: auto;
+	border-radius: 30px;
+
+}
+
+p  {
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.box p  {
+  display: none;
+}
+
+.box img {
+  display: none;
+}
+.box select {
+  display: none;
+}
+.box form {
+  display: none;
+}
+.box div {
+  min-height: 100px;
+  min-width: 300px;
+  
+  border-radius: 50% 50% 0% 0%;
+  background-color: #32ccfe;
+}

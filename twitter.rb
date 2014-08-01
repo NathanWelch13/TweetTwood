@@ -29,7 +29,7 @@ class TwitterSearch
 
 	def self.search(query)
 		if query == nil 
-			@@client.search(":)", :result_type => "recent", :geocode => query).take(1000)  	
+			@@client.search(":)", :result_type => "recent", :geocode => query).take(10)  	
 		else
 			@@client.search(query, :result_type => "recent", :geocode => query).take(100)
 		end
